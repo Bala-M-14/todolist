@@ -24,11 +24,12 @@
         </div>
         <div class="taskContainer" >
            <div class="buttons">
-                <button class="tasks">TASKS</button>
+                <button class="tasks" onclick="displaytasks()">TASKS</button>
                 <p>|</p>
-                <button class="completedTasks">COMPLETED TASKS</button>
+                <button class="completedTasks" onclick="displaycompleted()">COMPLETED TASKS</button>
            </div>
            <ol class="taskList" id="taskList"></ol>
+           <ol class="completedList" id="completedList"></ol>
         </div>
     </div>
 </body>
