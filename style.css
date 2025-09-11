@@ -111,6 +111,12 @@ body,html {
   width: 30rem;
   align-items: center;
   margin-top: 3rem;
+  max-height: 300px; 
+  overflow-y: auto;
+}
+.taskContainer::-webkit-scrollbar {
+  width: 1px;
+  
 }
 
 .taskContainer h1 {
