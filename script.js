@@ -47,13 +47,20 @@ function movetocom(event) {
     const taskItem = event.target.closest(".taskItem");
     const completedList = document.getElementById("completedList");
     const completeButton = taskItem.querySelector(".combut");
-    if (completeButton) completeButton.remove();
+   if (completeButton) 
+    {
+          const completedText = document.createElement("span");
+            completedText.className = "completed-label";
+            completedText.textContent = "COMPLETED";
+            completeButton.replaceWith(completedText);
+        }
     const deletebutton = taskItem.querySelector(".delbtn");
     if (deletebutton) deletebutton.remove();
     completedList.appendChild(taskItem);
     taskItem.classList.add("completed");
     const taskText = taskItem.querySelector(".taskitemtxt").innerText;
    completedTasks.push(taskText);
+   
     
 }
 function displaycompleted() {

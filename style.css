@@ -319,6 +319,12 @@ body,html {
     padding: 5px;
   }
 }
+.completed-label {
+  font-size: 1rem;
+  color: #00ff00; 
+  font-weight: bold;
+  background:#222;
+}
 
 
 
