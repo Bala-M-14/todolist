@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDolist</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link href="https://www.cdnfonts.com/mate-journal-133325.font" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 id="title">To-do list ..</h1>
+    <div class="fullcontainer">
+        <div class="container">
+            <h1>JUST DO IT</h1>
+            <div class="inputandbutton">
+               <input type="text"  class="taskInput" id="taskInput" placeholder="Add a new task...">
+               <input type="text" class="descriptionInput" id="descriptionInput" placeholder="Add a description...">
+               <button class="addButton" id="addButton" onclick="display()">Add Task</button>
+            </div>
+        </div>
+        <div class="taskContainer" >
+           <div class="buttons">
+                <button class="tasks">TASKS</button>
+                <p>|</p>
+                <button class="completedTasks">COMPLETED TASKS</button>
+           </div>
+           <ol class="taskList" id="taskList"></ol>
+        </div>
+    </div>
+</body>
+</html>
