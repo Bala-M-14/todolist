@@ -29,6 +29,6 @@ function deletetask() {
 }   
 
 function movetocom(){
-    
+    // Remove the task from the current list
 }
 
