@@ -92,9 +92,26 @@ window.onload = function(): void {
   }
   
   displaytasks();
+
+  const taskInput = document.getElementById("taskInput") as HTMLInputElement;
+  const descriptionInput = document.getElementById("descriptionInput") as HTMLInputElement;
+  const addTaskBtn = document.getElementById("addTaskBtn") as HTMLButtonElement;
+
+    taskInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      descriptionInput.focus(); 
+    }
+  });
+
+  descriptionInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    tsdisplay();
+    setTimeout(() => taskInput.focus(), 0);  
+  }
+});  
 }
-
-
 window.deletetask = deletetask;
 window.movetocom = movetocom;
 window.displaytasks = displaytasks;

@@ -65,6 +65,22 @@ window.onload = function () {
         document.getElementById("completedList").innerHTML = savedCompleted;
     }
     displaytasks();
+    var taskInput = document.getElementById("taskInput");
+    var descriptionInput = document.getElementById("descriptionInput");
+    var addTaskBtn = document.getElementById("addTaskBtn");
+    taskInput.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            descriptionInput.focus();
+        }
+    });
+    descriptionInput.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            tsdisplay();
+            setTimeout(function () { return taskInput.focus(); }, 0);
+        }
+    });
 };
 window.deletetask = deletetask;
 window.movetocom = movetocom;
